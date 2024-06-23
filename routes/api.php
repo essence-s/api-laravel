@@ -10,9 +10,7 @@ use App\Http\Controllers\Api\studentController;
 
 Route::get('/students', [studentController::class, 'index']);
 
-Route::get('/students/{id}', function () {
-    return "obteniendo un studiante";
-});
+Route::get('/students/{id}', [studentController::class, 'show']);
 
 Route::post('/students', [studentController::class, 'store']);
 
