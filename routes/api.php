@@ -14,10 +14,9 @@ Route::get('/students/{id}', [studentController::class, 'show']);
 
 Route::post('/students', [studentController::class, 'store']);
 
-Route::put('/students/{id}', function () {
-    return "actualizando st";
-});
+Route::put('/students/{id}', [studentController::class, 'update']);
 
-Route::delete('/students', function () {
-    return "eliminando st";
-});
+Route::patch('/students/{id}', [studentController::class, 'updatePartial']);
+
+
+Route::delete('/students/{id}', [studentController::class, 'delete']);
